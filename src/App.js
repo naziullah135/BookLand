@@ -7,6 +7,7 @@ import Login from "./components/Login/Login";
 import NotFound from "./components/NotFound/NotFound";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import CheckOut from "./components/CheckOut/CheckOut";
+import AddBook from "./components/AddBook/AddBook";
 
 export const UserContext = createContext();
 function App() {
@@ -33,6 +34,9 @@ function App() {
             </PrivateRoute>
             <Route path="/admin">
               <AdminPage />
+            </Route>
+            <Route path="/addBook">
+              <AddBook />
             </Route>
             <Route path="*">
               <NotFound />

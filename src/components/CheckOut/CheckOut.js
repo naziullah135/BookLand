@@ -5,12 +5,13 @@ import "./CheckOut.css";
 const CheckOut = () => {
   const { _id } = useParams();
   const [books, setBooks] = useState([]);
+  console.log(books);
   // const {strTeam} = props.details;
   useEffect(() => {
     fetch(`https://mysterious-bastion-60676.herokuapp.com/book/${_id}`)
       .then((res) => res.json())
       .then((data) => setBooks(data));
-  });
+  },[]);
   return (
     <div className="container">
       <h1>CheckOut</h1>
