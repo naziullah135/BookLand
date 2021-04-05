@@ -10,34 +10,35 @@ import CheckOut from "./components/CheckOut/CheckOut";
 
 export const UserContext = createContext();
 function App() {
-  const [loggedInUser,setLoggedInUser] = useState({});
+  const [loggedInUser, setLoggedInUser] = useState({});
   return (
     <>
-    <UserContext.Provider value={[loggedInUser,setLoggedInUser]}>
-      <Router>
-        <Switch>
-          <Route exact path="/">
-            <NavBar />
-            <Home />
-          </Route>
-          <Route path="/home">
-            <NavBar />
-            <Home />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <PrivateRoute path="/checkout/:_id">
-            <CheckOut></CheckOut>
-          </PrivateRoute>
-          <Route path="/admin">
-            <AdminPage />
-          </Route>
-          <Route path="*">
-            <NotFound />
-          </Route>
-        </Switch>
-      </Router>
+      <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <NavBar />
+              <Home />
+            </Route>
+            <Route path="/home">
+              <NavBar />
+              <Home />
+            </Route>
+            <Route path="/login">
+              <NavBar />
+              <Login />
+            </Route>
+            <PrivateRoute path="/checkout/:_id">
+              <CheckOut></CheckOut>
+            </PrivateRoute>
+            <Route path="/admin">
+              <AdminPage />
+            </Route>
+            <Route path="*">
+              <NotFound />
+            </Route>
+          </Switch>
+        </Router>
       </UserContext.Provider>
     </>
   );

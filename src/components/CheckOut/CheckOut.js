@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import './CheckOut.css';
+import "./CheckOut.css";
 
 const CheckOut = () => {
   const { _id } = useParams();
   const [books, setBooks] = useState([]);
   // const {strTeam} = props.details;
   useEffect(() => {
-    fetch(`http://localhost:5000/book/${_id}`)
+    fetch(`https://mysterious-bastion-60676.herokuapp.com/book/${_id}`)
       .then((res) => res.json())
       .then((data) => setBooks(data));
   });
@@ -25,9 +25,14 @@ const CheckOut = () => {
           <td>1</td>
           <td>{books.price}</td>
         </tr>
+        <tr>
+          <td>Total</td>
+          <td></td>
+          <td>{books.price}</td>
+        </tr>
       </table>
       <div className="d-flex justify-content-end mt-3">
-          <button className="btn btn-info">Checkout</button>
+        <button className="btn btn-info">Checkout</button>
       </div>
     </div>
   );

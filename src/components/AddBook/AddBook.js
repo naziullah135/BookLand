@@ -41,7 +41,7 @@ const AddBook = () => {
   };
   return (
     <div className="added-page">
-      <h1>This is Added page</h1>
+      <h1>Add Book</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <label htmlFor=""><h5>Book Name</h5></label>
         <br />
