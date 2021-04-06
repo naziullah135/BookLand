@@ -1,0 +1,19 @@
+.side-nav {
+  background-color: rgb(3, 3, 82);
+  background-size: cover;
+  color: white;
+  height: 100%;
+  position:fixed;
+}
+.side-nav-box {
+  padding-left: 35px;
+  padding-right: 60px;
+}
+.side-nav-box h1 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.side-nav-box p {
+  font-size: 15px;
+  font-weight: bold;
+}

@@ -13,3 +13,9 @@ table {
   tr:nth-child(even) {
     background-color: #dddddd;
   }
+  .checkout-table{
+    box-shadow: 5px 5px 5px 5px lightblue;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }

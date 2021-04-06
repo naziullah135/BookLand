@@ -198,7 +198,7 @@ function Login() {
        {user.isSignedIn ? (
         <button className="btn btn-danger google-btn" onClick={handleSignOut}>Sign out:</button>
       ) : (
-        <button className="btn btn-danger google-btn" onClick={handleSignIn}><img style={{width:'20px'}} src={Gicon} alt=""/> &nbsp; Sign In</button>
+        <button className="btn btn-danger google-btn" onClick={handleSignIn}><img style={{width:'20px'}} src={Gicon} alt=""/> &nbsp; Continue with Google</button>
       )}
        </div>
     </div>

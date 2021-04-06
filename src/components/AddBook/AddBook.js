@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import './Addbook.css';
+import "./Addbook.css";
+import SideNav from "../SideNav/SideNav";
 
 const AddBook = () => {
   const { register, handleSubmit, watch, errors } = useForm();
@@ -11,8 +12,8 @@ const AddBook = () => {
     const bookData = {
       name: data.name,
       authorname: data.authName,
-      price:data.price,
-      imageURL: imageURL
+      price: data.price,
+      imageURL: imageURL,
     };
     const url = `http://localhost:5000/addBook`;
     console.log(bookData);
@@ -40,27 +41,48 @@ const AddBook = () => {
       });
   };
   return (
-    <div className="added-page">
-      <h1>Add Book</h1>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <label htmlFor=""><h5>Book Name</h5></label>
-        <br />
-        <input name="name" placeholder="Enter book name" ref={register} />
-        <br />
-        <label htmlFor=""><h5>Author Name</h5></label>
-        <br />
-        <input name="authName" placeholder="Enter author name" ref={register} />
-        <br />
-        <label htmlFor=""><h5>Price</h5></label>
-        <br />
-        <input name="price" placeholder="Enter price" ref={register} />
-        <br />
-        <label htmlFor=""><h5>Add Image</h5></label>
-        <br />
-        <input name="exampleRequired" type="file" onChange={handleImgUpload} />
-        <br />
-        <input className="btn btn-info" type="submit" />
-      </form>
+    <div className="d-flex">
+      <div className="col-md-3 col-sm-12">
+        <SideNav />
+      </div>
+      <div className="added-page col-md-9 col-sm-12">
+        <h1>Add Book</h1>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <label htmlFor="">
+            <h5>Book Name</h5>
+          </label>
+          <br />
+          <input name="name" placeholder="Enter book name" ref={register} />
+          <br />
+          <label htmlFor="">
+            <h5>Author Name</h5>
+          </label>
+          <br />
+          <input
+            name="authName"
+            placeholder="Enter author name"
+            ref={register}
+          />
+          <br />
+          <label htmlFor="">
+            <h5>Price</h5>
+          </label>
+          <br />
+          <input name="price" placeholder="Enter price" ref={register} />
+          <br />
+          <label htmlFor="">
+            <h5>Add Image</h5>
+          </label>
+          <br />
+          <input
+            name="exampleRequired"
+            type="file"
+            onChange={handleImgUpload}
+          />
+          <br />
+          <input className="btn btn-info" type="submit" />
+        </form>
+      </div>
     </div>
   );
 };

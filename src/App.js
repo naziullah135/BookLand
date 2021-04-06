@@ -8,6 +8,8 @@ import NotFound from "./components/NotFound/NotFound";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import CheckOut from "./components/CheckOut/CheckOut";
 import AddBook from "./components/AddBook/AddBook";
+import ManageBooks from "./components/ManageBooks/ManageBooks";
+import Orders from "./components/Orders/Orders";
 
 export const UserContext = createContext();
 function App() {
@@ -30,10 +32,18 @@ function App() {
               <Login />
             </Route>
             <PrivateRoute path="/checkout/:_id">
-              <CheckOut></CheckOut>
+              <NavBar />
+              <CheckOut />
             </PrivateRoute>
-            <Route path="/admin">
+            <PrivateRoute path="/orders">
+              <NavBar />
+             <Orders />
+            </PrivateRoute>
+            <PrivateRoute path="/admin">
               <AdminPage />
+            </PrivateRoute>
+            <Route path="/manageBooks">
+              <ManageBooks />
             </Route>
             <Route path="/addBook">
               <AddBook />

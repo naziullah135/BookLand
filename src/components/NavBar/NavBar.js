@@ -16,7 +16,7 @@ const NavBar = () => {
             <Link to="/home">
               <h5>Home</h5>
             </Link>
-            <Link to="/checkout/:_id">
+            <Link to="/orders">
               <h5>Orders</h5>
             </Link>
             <Link to="/admin">
