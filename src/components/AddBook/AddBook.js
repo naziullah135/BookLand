@@ -15,7 +15,7 @@ const AddBook = () => {
       price: data.price,
       imageURL: imageURL,
     };
-    const url = `http://localhost:5000/addBook`;
+    const url = `https://mysterious-bastion-60676.herokuapp.com/addBook`;
     console.log(bookData);
     fetch(url, {
       method: "POST",

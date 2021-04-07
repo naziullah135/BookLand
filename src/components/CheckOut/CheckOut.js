@@ -23,7 +23,7 @@ const CheckOut = () => {
 
   const submitOrder = () => {
     const newOrder = { ...loggedInUser, ...books, ...selectedDate };
-    fetch("http://localhost:5000/orders", {
+    fetch("https://mysterious-bastion-60676.herokuapp.com/orders", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
