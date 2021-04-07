@@ -4,6 +4,16 @@ import { faEdit, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 
 const ManageBook = (props) => {
   const { name, price, authorname, imageURL, _id } = props.book;
+
+  const deleteBook = (id) => {
+    fetch(`http://localhost:5000/deleteBook/${id}`,{
+      method: 'DELETE'
+    })
+    .then(res => res.json())
+    .then(result => {
+      console.log('delete succesfully')
+    })
+  };
   return (
     <div>
       <div className="checkout-table">
@@ -15,7 +25,7 @@ const ManageBook = (props) => {
             <td>
               <FontAwesomeIcon icon={faEdit} />
               &nbsp;
-              <button>
+              <button onClick={() => deleteBook(_id)}>
                 <FontAwesomeIcon icon={faTrashAlt} />
               </button>
             </td>
