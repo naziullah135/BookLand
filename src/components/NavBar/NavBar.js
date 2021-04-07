@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../App";
 import './NavBar.css';
+import Logo from "../../images/Logo-02.png"
 
 const NavBar = () => {
   const [loggedInUser,setLoggedInUser] = useContext(UserContext);
@@ -10,7 +11,7 @@ const NavBar = () => {
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container-fluid">
-            <h3>Book Shop</h3>
+            <img src={Logo} style={{width:'50%'}} alt=""/>
           </div>
           <div class="nav-link container-fluid justify-content-end">
             <Link to="/home">

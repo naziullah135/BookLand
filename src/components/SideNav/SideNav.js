@@ -8,7 +8,7 @@ const SideNav = () => {
   return (
     <div className="side-nav">
       <div className="side-nav-box">
-        <h1>Book Shop</h1>
+        <h1>BookLand</h1>
         <Link to="/manageBooks"><p><FontAwesomeIcon icon={faThLarge} /> &nbsp;Manage Books</p></Link>
         <Link to="/addBook"><p><FontAwesomeIcon icon={faPlus} /> &nbsp;Add Book</p></Link>
         <p><FontAwesomeIcon icon={faEdit} />&nbsp;Edit Book</p>

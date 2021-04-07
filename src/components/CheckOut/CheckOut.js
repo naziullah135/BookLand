@@ -82,7 +82,7 @@ const CheckOut = () => {
       </div>
       <div className="d-flex justify-content-end mt-3">
         <button onClick={submitOrder} className="btn btn-info">
-          Checkout
+          Order Now
         </button>
       </div>
     </div>
