@@ -10,6 +10,7 @@ import CheckOut from "./components/CheckOut/CheckOut";
 import AddBook from "./components/AddBook/AddBook";
 import ManageBooks from "./components/ManageBooks/ManageBooks";
 import Orders from "./components/Orders/Orders";
+import SideNav from "./components/SideNav/SideNav";
 
 export const UserContext = createContext();
 function App() {

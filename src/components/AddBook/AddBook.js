@@ -42,10 +42,10 @@ const AddBook = () => {
   };
   return (
     <div className="d-flex">
-      <div className="col-md-3 col-sm-12">
+      <div className="col-md-3">
         <SideNav />
       </div>
-      <div className="added-page col-md-9 col-sm-12">
+      <div className="added-page col-md-9">
         <h1>Add Book</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <label htmlFor="">

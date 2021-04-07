@@ -6,13 +6,13 @@ const ManageBook = (props) => {
   const { name, price, authorname, imageURL, _id } = props.book;
 
   const deleteBook = (id) => {
-    fetch(`http://localhost:5000/deleteBook/${id}`,{
-      method: 'DELETE'
+    fetch(`https://mysterious-bastion-60676.herokuapp.com/deleteBook/${id}`, {
+      method: "DELETE",
     })
-    .then(res => res.json())
-    .then(result => {
-      console.log('delete succesfully')
-    })
+      .then((res) => res.json())
+      .then((result) => {
+        console.log("delete succesfully");
+      });
   };
   return (
     <div>
@@ -25,7 +25,7 @@ const ManageBook = (props) => {
             <td>
               <FontAwesomeIcon icon={faEdit} />
               &nbsp;
-              <button onClick={() => deleteBook(_id)}>
+              <button className="delete-btn" onClick={() => deleteBook(_id)}>
                 <FontAwesomeIcon icon={faTrashAlt} />
               </button>
             </td>
