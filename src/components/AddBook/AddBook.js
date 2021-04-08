@@ -42,24 +42,24 @@ const AddBook = () => {
   };
   return (
     <div className="d-flex">
-      <div className="col-md-3">
+      <div className="col-md-3 col-sm-3">
         <SideNav />
       </div>
-      <div className="added-page col-md-9">
+      <div className="added-page col-md-9 col-sm-9">
         <h1>Add Book</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <label htmlFor="">
             <h5>Book Name</h5>
           </label>
           <br />
-          <input name="name" placeholder="Enter book name" ref={register} />
+          <input name="name" className="input-field" placeholder="Enter book name" ref={register} />
           <br />
           <label htmlFor="">
             <h5>Author Name</h5>
           </label>
           <br />
           <input
-            name="authName"
+            name="authName" className="input-field"
             placeholder="Enter author name"
             ref={register}
           />
@@ -68,19 +68,19 @@ const AddBook = () => {
             <h5>Price</h5>
           </label>
           <br />
-          <input name="price" placeholder="Enter price" ref={register} />
+          <input name="price" className="input-field" placeholder="Enter price" ref={register} />
           <br />
           <label htmlFor="">
             <h5>Add Image</h5>
           </label>
           <br />
           <input
-            name="exampleRequired"
+            name="exampleRequired" className="input-field"
             type="file"
             onChange={handleImgUpload}
           />
           <br />
-          <input className="btn btn-info" type="submit" />
+          <input className="btn btn-info input-field" type="submit" />
         </form>
       </div>
     </div>
