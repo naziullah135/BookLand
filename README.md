@@ -1,6 +1,9 @@
 ## Hi there, I am Naziullah Shawn.
 This is my first full-stack project. What I used to create this project is React, Firebase, Bootstrap, Material-UI, mongoDB, Node.js  that's it.
 
+## Introduction:
+This is my e-Commerce Book selling store. All kinds of technology related books are available in this store.
+
 ## Project Name: BookLand
 
 ### Live Site Link: https://book-shop-7494b.web.app/
