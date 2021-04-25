@@ -15,9 +15,6 @@ const ManageBook = (props) => {
       });
   };
   return (
-    <div>
-      <div className="checkout-table">
-        <table>
           <tr>
             <td>{name}</td>
             <td>{authorname}</td>
@@ -30,9 +27,6 @@ const ManageBook = (props) => {
               </button>
             </td>
           </tr>
-        </table>
-      </div>
-    </div>
   );
 };
 

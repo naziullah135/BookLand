@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './Book.css';
+import "./Book.css";
 
 const Book = (props) => {
-  const {name,price,authorname,imageURL,_id} = props.book;
+  const { name, price, authorname, imageURL, _id } = props.book;
   return (
     <div className="col-md-4 book-box mt-4">
       <div className="img-div">
-        <img  src={imageURL} alt="" />
+        <img src={imageURL} alt="" />
       </div>
       <div>
         <h3>{name}</h3>
@@ -18,7 +18,9 @@ const Book = (props) => {
           <h2>{price}</h2>
         </div>
         <div className="buy-btn d-flex justify-content-end">
-          <Link to ={`/checkout/${_id}`}><button className="btn btn-info">Buy Now</button></Link>
+          <Link to={`/checkout/${_id}`}>
+            <button className="btn btn-info text-white">Buy Now</button>
+          </Link>
         </div>
       </div>
     </div>

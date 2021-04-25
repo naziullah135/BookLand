@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import OrderList from "./OrderList";
 import "./Orders.css";
 const Orders = () => {
   const [orders, setOrders] = useState([]);
@@ -16,21 +17,10 @@ const Orders = () => {
           <th>Order Date</th>
           <th>Book Name</th>
           <th>Email</th>
-          <th>Price</th>
-          
+          <th>Price</th>         
         </tr>
+      {orders.map(order => <OrderList order={order}></OrderList>)}
       </table>
-      {orders.map((order) => (
-        <table>
-          <tr>
-
-            <td>{order.orderIn}</td>
-            <td>{order.name}</td>
-            <td>{order.email}</td>
-            <td>{order.price}</td>
-          </tr>
-        </table>
-      ))}
     </div>
   );
 };

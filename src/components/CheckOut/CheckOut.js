@@ -81,7 +81,7 @@ const CheckOut = () => {
         </MuiPickersUtilsProvider>
       </div>
       <div className="d-flex justify-content-end mt-3">
-        <button onClick={submitOrder} className="btn btn-info">
+        <button onClick={submitOrder} className="btn btn-info text-white">
           Order Now
         </button>
       </div>

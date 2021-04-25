@@ -25,22 +25,11 @@ const ManageBooks = () => {
             <th>Price</th>
             <th>Action</th>
           </tr>
-        </table>
-        {books.map((book) => (
+          {books.map((book) => (
           <ManageBook book={book}></ManageBook>
         ))}
+        </table>   
       </div>
-      {/* <div className="col-md-4">
-        <h5>
-          <Link to="manageBooks">Manage Books</Link>
-        </h5>
-        <h5>
-          <Link to="/addBook">Add Book</Link>
-        </h5>
-      </div>
-      <div className="col-md-8">
-        {mana}
-      </div> */}
     </div>
   );
 };
